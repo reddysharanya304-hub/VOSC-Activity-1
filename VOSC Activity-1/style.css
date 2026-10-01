@@ -1,0 +1,241 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0b1020, #17112e, #101c32);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+}
+
+/* Header */
+.tag {
+    color: #a78bfa;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+header h1 span {
+    color: #a78bfa;
+}
+
+.subtitle {
+    color: #9ca3af;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0 22px;
+}
+
+.score-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 16px;
+    transition: 0.3s ease;
+}
+
+.score-card.active {
+    border-color: #a78bfa;
+    background: rgba(167, 139, 250, 0.12);
+    transform: translateY(-3px);
+}
+
+.player-symbol {
+    display: block;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.x-symbol {
+    color: #22d3ee;
+}
+
+.o-symbol {
+    color: #c084fc;
+}
+
+.score-card p {
+    color: #9ca3af;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin: 5px 0;
+}
+
+.score-card h2 {
+    font-size: 27px;
+}
+
+/* Turn Status */
+.status {
+    color: #d1d5db;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+/* Game Board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+}
+
+/* Individual Cells */
+.cell {
+    aspect-ratio: 1 / 1;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.07);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.cell:hover:not(:disabled) {
+    background: rgba(167, 139, 250, 0.15);
+    border-color: #a78bfa;
+    transform: scale(1.04);
+}
+
+.cell:focus-visible,
+.controls button:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+.cell.x {
+    color: #22d3ee;
+    text-shadow: 0 0 18px rgba(34, 211, 238, 0.6);
+}
+
+.cell.o {
+    color: #c084fc;
+    text-shadow: 0 0 18px rgba(192, 132, 252, 0.6);
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+}
+
+/* Winning Message */
+.result {
+    min-height: 28px;
+    margin-top: 20px;
+    color: #a78bfa;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Buttons */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.restart-btn {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+}
+
+.restart-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.4);
+}
+
+.reset-btn {
+    background: rgba(255, 255, 255, 0.09);
+    color: #d1d5db;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.reset-btn:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+/* Footer */
+footer {
+    margin-top: 38px;
+    color: #6b7280;
+    font-size: 11px;
+    line-height: 2;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    .game-board {
+        gap: 8px;
+    }
+
+    .cell {
+        font-size: 42px;
+        border-radius: 12px;
+    }
+
+    .score-card {
+        padding: 12px;
+    }
+
+    .controls button {
+        padding: 11px 14px;
+    }
+}

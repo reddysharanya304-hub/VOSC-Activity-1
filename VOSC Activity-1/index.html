@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic Tac Toe | VOSC Activity-1</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Game Heading -->
+        <header>
+            <p class="tag">VOSC ACTIVITY-1</p>
+            <h1>Tic <span>Tac</span> Toe</h1>
+            <p class="subtitle">A classic game. A modern experience.</p>
+        </header>
+
+        <!-- Scoreboard -->
+        <section class="scoreboard">
+
+            <div class="score-card active" id="playerX">
+                <span class="player-symbol x-symbol">X</span>
+                <p>PLAYER X</p>
+                <h2 id="scoreX">0</h2>
+            </div>
+
+            <div class="score-card" id="playerO">
+                <span class="player-symbol o-symbol">O</span>
+                <p>PLAYER O</p>
+                <h2 id="scoreO">0</h2>
+            </div>
+
+        </section>
+
+        <!-- Turn Information -->
+        <div class="status" id="status">
+            Player X's turn
+        </div>
+
+        <!-- Game Board -->
+        <section class="game-board" id="board">
+
+            <button class="cell" data-index="0" aria-label="Cell 1"></button>
+            <button class="cell" data-index="1" aria-label="Cell 2"></button>
+            <button class="cell" data-index="2" aria-label="Cell 3"></button>
+
+            <button class="cell" data-index="3" aria-label="Cell 4"></button>
+            <button class="cell" data-index="4" aria-label="Cell 5"></button>
+            <button class="cell" data-index="5" aria-label="Cell 6"></button>
+
+            <button class="cell" data-index="6" aria-label="Cell 7"></button>
+            <button class="cell" data-index="7" aria-label="Cell 8"></button>
+            <button class="cell" data-index="8" aria-label="Cell 9"></button>
+
+        </section>
+
+        <!-- Result Message -->
+        <p class="result" id="result" aria-live="polite"></p>
+
+        <!-- Game Controls -->
+        <div class="controls">
+
+            <button id="restartBtn" class="restart-btn">
+                ↻ Restart Game
+            </button>
+
+            <button id="resetBtn" class="reset-btn">
+                Reset Scores
+            </button>
+
+        </div>
+
+        <footer>
+            <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+            <p>VOSC Activity-1 | Tic-Tac-Toe</p>
+        </footer>
+
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
